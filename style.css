@@ -118,4 +118,31 @@ button:hover {
   height: 400px;
 }
 
+/* styling welcome section */
+.welcome-container {
+  padding: 2rem 6rem 2rem 6rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  line-height: 2.25rem;
+}
+.welcome-image {
+  display: block;
+  width: 2500px;
+  height: 385px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px var(--green-dark);
+}
+.welcome {
+  font-family: "Dancing Script", cursive;
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+.welcome-desc {
+  margin-bottom: 1rem;
+  color: var(--grey);
+}
+
+
+
 
