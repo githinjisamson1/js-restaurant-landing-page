@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:ital,wght@0,200;0,400;0,700;1,100&display=swap");
+
+/* global variables */
+:root {
+  --green-light: #b7efc5;
+  --green: #4ad66d;
+  --green-dark: #10451d;
+  --yellow: #f9a620;
+  --grey: #777;
+}
+
+/* reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Dancing Script", cursive;
+  font-family: "Poppins", sans-serif;
+}
+
+/* styling header section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  box-shadow: 0px 0px 2px var(--green-dark);
+}
+#logo {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+#logo,
+.nav-link.active,
+#cart {
+  color: var(--green-dark);
+}
+#navigation-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+.nav-link {
+  margin-right: 3rem;
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--grey);
+  transition: all 100ms ease;
+}
+.nav-link:hover {
+  border-bottom: 2px solid var(--yellow);
+}
+.nav-link.active {
+  font-weight: 700;
+}
+#cart {
+  font-size: 1.5rem;
+  transition: all 300ms ease;
+}
+#cart:hover{
+    color: var(--yellow);
+}
