@@ -237,10 +237,32 @@ ul.menu {
   text-decoration: line-through;
   font-size: 0.5rem;
 }
-.card-btn{
-    background-color: var(--yellow);
+.card-btn {
+  background-color: var(--yellow);
 }
-.card-btn:hover{
-    background-color: var(--white);
-    color: var(--yellow);
+.card-btn:hover {
+  background-color: var(--white);
+  color: var(--yellow);
+}
+
+/* style footer section*/
+.footer-container {
+  padding: 2rem 6rem 2rem 6rem;
+  background-color: var(--green-light);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 200;
+  color: #444;
+}
+.footer-container div {
+  line-height: 2.5rem;
+}
+.social-icons i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: var(--green-dark);
+}
+.footer-container ul {
+  list-style-type: none;
 }
