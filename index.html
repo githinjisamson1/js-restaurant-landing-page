@@ -52,7 +52,7 @@
               type="text"
               placeholder="Enter your address.."
             />
-            <button class="home-btn">Get Started</button>
+            <button class="home-btn" type="submit">Get Started</button>
           </form>
         </div>
         <img class="home-image" src="assets/pizza.jpg" alt="pizza" />
@@ -88,8 +88,8 @@
         <p class="reason">Reason</p>
         <h2 class="reason-heading">Why Choose Us?</h2>
         <div class="cards">
+          <!-- 1st card -->
           <div class="card">
-            <!-- reason-icon -->
             <i class="fa-solid fa-book-open-reader"></i>
             <h3 class="reason-title">Various Menus</h3>
             <p class="reason-desc">
@@ -97,8 +97,9 @@
               repudiandae labore cum nulla possimus, in delectus excepturi!
             </p>
           </div>
+
+          <!-- 2nd card -->
           <div class="card">
-            <!-- reason-icon -->
             <i class="fa-solid fa-truck"></i>
             <h3 class="reason-title">Pocket Friendly Delivery</h3>
             <p class="reason-desc">
@@ -108,8 +109,8 @@
             </p>
           </div>
 
+          <!-- 3rd card -->
           <div class="card">
-            <!-- reason-icon -->
             <i class="fa-solid fa-gift"></i>
             <h3 class="reason-title">Best Offers</h3>
             <p class="reason-desc">
@@ -122,6 +123,107 @@
       </div>
     </section>
     <!-- end of reason section -->
+
+    <!-- start of menu section -->
+    <section id="menu">
+      <div class="menu-container">
+        <p class="browse">Browse</p>
+        <h2 class="menu-heading">Explore Our Menu</h2>
+        <div class="menu-cards">
+          <!-- vertical menu -->
+          <ul class="menu">
+            <li class="menu-item active">Breakfast</li>
+            <li class="menu-item">Lunch</li>
+            <li class="menu-item">Dinner</li>
+            <li class="menu-item">Desert</li>
+            <li class="menu-item">Soups</li>
+            <li class="menu-item">Drinks</li>
+          </ul>
+
+          <!-- menu card items -->
+          <div class="menu-card-items">
+            <div class="card-item">
+              <div class="card-image">
+                <img src="assets/chickenMasala.jpg" alt="" />
+              </div>
+              <h4 class="card-title">Chicken Masala</h4>
+              <p class="card-price">
+                $ 120 <span class="changed-price">150</span>
+              </p>
+              <button class="card-btn">Add to Cart</button>
+            </div>
+
+            <div class="card-item">
+              <div class="card-image">
+                <img src="assets/nunBread.jpg" alt="" />
+              </div>
+              <h4 class="card-title">Nun Bread</h4>
+              <p class="card-price">
+                $ 75 <span class="changed-price">100</span>
+              </p>
+              <button class="card-btn">Add to Cart</button>
+            </div>
+
+            <div class="card-item">
+              <div class="card-image">
+                <img src="assets/sandwichSoup.jpg" alt="" />
+              </div>
+              <h4 class="card-title">Sandwich Soup</h4>
+              <p class="card-price">
+                $ 100 <span class="changed-price">140</span>
+              </p>
+              <button class="card-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end of menu section -->
+
+    <!-- start of footer -->
+    <section id="footer">
+      <div class="footer-container">
+        <div>
+          <h2>Figo</h2>
+          <p>Don't Miss to Subscribe to Our News Feed.</p>
+          <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-square-x-twitter"></i>
+            <i class="fa-brands fa-square-instagram"></i>
+            <i class="fa-brands fa-pinterest"></i>
+          </div>
+        </div>
+        <div class="our-menu">
+          <h5>Our Menu</h5>
+          <ul>
+            <li>Lunch</li>
+            <li>Dinner</li>
+            <li>Catering</li>
+          </ul>
+        </div>
+        <div class="links">
+          <h5>Links</h5>
+          <ul>
+            <li>About Us</li>
+            <li>Terms of Use</li>
+            <li>Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="links">
+          <h5>Contact</h5>
+          <ul>
+            <li>+254734576512</li>
+            <li>
+              <a href="mailto:githinjisamson148@gmail.com"
+                >info@restaurant.com</a
+              >
+            </li>
+            <li>Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- end of footer -->
     <script src="script.js"></script>
   </body>
 </html>
