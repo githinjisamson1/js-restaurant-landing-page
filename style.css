@@ -2,11 +2,12 @@
 
 /* global variables */
 :root {
-  --green-light: #b7efc5;
+  --green-light: #ddf7e4;
   --green: #4ad66d;
   --green-dark: #10451d;
   --yellow: #f9a620;
   --grey: #777;
+  --white: #fff;
 }
 
 /* reset default styles */
@@ -16,7 +17,7 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-  font-family: "Dancing Script", cursive;
+
   font-family: "Poppins", sans-serif;
 }
 
@@ -61,6 +62,60 @@ header {
   font-size: 1.5rem;
   transition: all 300ms ease;
 }
-#cart:hover{
-    color: var(--yellow);
+#cart:hover {
+  color: var(--yellow);
 }
+
+/* styling home section */
+.home-container {
+  padding: 1rem 6rem 1rem 6rem;
+  background-color: var(--green-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.home-title {
+  font-size: 3.5rem;
+}
+.home-desc {
+  color: var(--grey);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.home-input {
+  margin-right: 0.5rem;
+  padding: 10px;
+  border-radius: 5px;
+  width: 250px;
+  box-shadow: 0px 0px 2px var(--green-dark);
+  font-size: 1rem;
+  color: var(--grey);
+  transition: all 50ms ease;
+}
+.home-input:focus {
+  border: 1px solid var(--green);
+  caret-color: var(--green);
+  box-shadow: 0px 0px 0px;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: var(--white);
+  box-shadow: 0px 0px 2px var(--green-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+button:hover {
+  background-color: var(--white);
+  color: var(--green);
+}
+.home-image {
+  display: block;
+  border-radius: 50%;
+  height: 400px;
+}
+
+
