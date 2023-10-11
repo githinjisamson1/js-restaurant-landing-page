@@ -27,7 +27,8 @@ header,
 .cards,
 .menu-cards,
 .menu-card-items,
-.footer-container {
+.footer-container,
+.diet-plus-exclude {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +40,8 @@ header,
 .welcome-container,
 .reason-container,
 .menu-container,
-.footer-container {
+.footer-container,
+.explore-recipes-container {
   padding-left: 6rem;
   padding-right: 6rem;
 }
@@ -48,14 +50,16 @@ header,
 .welcome-container,
 .reason-container,
 .menu-container,
-.footer-container {
+.footer-container,
+.explore-recipes-container {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
 /* SECTION BOOKMARKS  */
 .welcome,
 .reason,
-.browse {
+.browse,
+.recipes {
   font-family: "Dancing Script", cursive;
   color: var(--yellow);
   font-size: 1.5rem;
@@ -63,7 +67,8 @@ header,
 
 /* CARDS */
 .card,
-.card-item {
+.card-item,
+.search-result {
   background-color: var(--green-light);
   border-radius: 5px 70px 5px 70px;
   color: #333;
@@ -80,7 +85,7 @@ header,
 button {
   padding: 10px;
   border-radius: 5px;
-  background-color: var(--green);
+  /* background-color: var(--green); */
   color: var(--white);
   box-shadow: 0px 0px 2px var(--green-dark);
   font-size: 1rem;
@@ -89,11 +94,13 @@ button {
   transition: all 300ms ease;
 }
 .home-btn,
-.welcome-btn {
+.welcome-btn,
+#recipe-btn {
   background-color: var(--green);
 }
 .home-btn:hover,
-.welcome-btn:hover {
+.welcome-btn:hover,
+#recipe-btn:hover {
   background-color: var(--white);
   color: var(--green);
 }
@@ -143,6 +150,7 @@ a {
 .home-container {
   background-color: var(--green-light);
   gap: 3rem;
+  border-radius: 0px 0px 50px 50px;
 }
 .home-title {
   font-size: 3.5rem;
@@ -267,9 +275,46 @@ ul.menu {
   color: var(--yellow);
 }
 
+/* style explore recipes section */
+.explore-recipes-container {
+  text-align: center;
+}
+#recipe-form {
+  margin-top: 2rem;
+
+  /* center form */
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 10px;
+  border-radius: 5px;
+}
+input[type="text"],
+select {
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+input[id="recipe-name"] {
+  width: 100%;
+}
+.diet-plus-exclude {
+  gap: 1rem;
+}
+input[id="exclude-ingredient"],
+select {
+  width: 50%;
+}
+#recipe-btn {
+  width: 100%;
+}
+
 /* style footer section */
 .footer-container {
   background-color: var(--green-light);
+  border-radius: 50px 50px 0px 0px;
   font-weight: 200;
   color: #444;
 }
@@ -296,4 +341,11 @@ ul.menu {
 }
 .footer-container .links a:hover {
   border-bottom: 1px solid #444;
+}
+
+/* styling search result container */
+.search-results-container {
+  display: grid;
+  grid-template-columns: repeat(4fr);
+  gap: 2rem;
 }
