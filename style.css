@@ -17,17 +17,89 @@
   box-sizing: border-box;
   border: none;
   outline: none;
-
   font-family: "Poppins", sans-serif;
 }
 
-/* styling header section */
-header {
+/* DISPLAY FLEX */
+header,
+.home-container,
+.welcome-container,
+.cards,
+.menu-cards,
+.menu-card-items,
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/* PADDING-LEFT & PADDING-RIGHT */
+header,
+.home-container,
+.welcome-container,
+.reason-container,
+.menu-container,
+.footer-container {
   padding-left: 6rem;
   padding-right: 6rem;
+}
+/* PADDING-TOP & PADDING-BOTTOM */
+.home-container,
+.welcome-container,
+.reason-container,
+.menu-container,
+.footer-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+/* SECTION BOOKMARKS  */
+.welcome,
+.reason,
+.browse {
+  font-family: "Dancing Script", cursive;
+  color: var(--yellow);
+  font-size: 1.5rem;
+}
+
+/* CARDS */
+.card,
+.card-item {
+  background-color: var(--green-light);
+  border-radius: 5px 70px 5px 70px;
+  color: #333;
+  transition: all 300ms ease;
+}
+
+/* CIRCULAR IMAGES */
+.home-image,
+.card-image img {
+  border-radius: 50%;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: var(--green);
+  color: var(--white);
+  box-shadow: 0px 0px 2px var(--green-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 300ms ease;
+}
+.home-btn,
+.welcome-btn {
+  background-color: var(--green);
+}
+.home-btn:hover,
+.welcome-btn:hover {
+  background-color: var(--white);
+  color: var(--green);
+}
+
+/* style header section */
+header {
   box-shadow: 0px 0px 2px var(--green-dark);
 }
 #logo {
@@ -44,11 +116,11 @@ header {
   display: flex;
   align-items: center;
 }
-.nav-link {
-  margin-right: 3rem;
+a {
+  text-decoration: none;
 }
 .nav-link {
-  text-decoration: none;
+  margin-right: 3rem;
   color: var(--grey);
   transition: all 100ms ease;
 }
@@ -57,6 +129,7 @@ header {
 }
 .nav-link.active {
   font-weight: 700;
+  border-bottom: 2px solid var(--yellow);
 }
 #cart {
   font-size: 1.5rem;
@@ -66,13 +139,9 @@ header {
   color: var(--yellow);
 }
 
-/* styling home section */
+/* style home section */
 .home-container {
-  padding: 1rem 6rem 1rem 6rem;
   background-color: var(--green-light);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 3rem;
 }
 .home-title {
@@ -98,34 +167,15 @@ header {
   caret-color: var(--green);
   box-shadow: 0px 0px 0px;
 }
-button {
-  padding: 10px;
-  border-radius: 5px;
-  background-color: var(--green);
-  color: var(--white);
-  box-shadow: 0px 0px 2px var(--green-dark);
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: all 300ms ease;
-}
-button:hover {
-  background-color: var(--white);
-  color: var(--green);
-}
 .home-image {
   display: block;
-  border-radius: 50%;
   height: 400px;
 }
 
-/* styling welcome section */
+/* style welcome section */
 .welcome-container {
-  padding: 2rem 6rem 2rem 6rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
   line-height: 2.25rem;
+  gap: 2rem;
 }
 .welcome-image {
   display: block;
@@ -134,41 +184,23 @@ button:hover {
   border-radius: 5px;
   box-shadow: 0px 0px 3px var(--green-dark);
 }
-.welcome {
-  font-family: "Dancing Script", cursive;
-  color: var(--yellow);
-  font-size: 1.5rem;
-}
 .welcome-desc {
   margin-bottom: 1rem;
   color: var(--grey);
 }
 
-/* styling reason section */
+/* style reason section */
 .reason-container {
-  padding: 2rem 6rem 2rem 6rem;
   text-align: center;
-}
-.reason {
-  font-family: "Dancing Script", cursive;
-  color: var(--yellow);
-  font-size: 1.5rem;
 }
 .cards {
   margin-top: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   gap: 1.5rem;
 }
 .card {
-  background-color: var(--green-light);
   padding: 10px;
   height: 200px;
-  border-radius: 5px 70px 5px 70px;
   line-height: 1.5rem;
-  color: #333;
-  transition: all 300ms ease;
 }
 .card:hover {
   background-color: var(--white);
@@ -184,18 +216,11 @@ button:hover {
   font-weight: 200;
 }
 
-/* styling menu section */
+/* style browse section */
 .menu-container {
-  padding: 2rem 6rem 2rem 6rem;
   text-align: center;
 }
-.browse {
-  font-family: "Dancing Script", cursive;
-  color: var(--yellow);
-  font-size: 1.5rem;
-}
 ul.menu {
-  /* background-color: yellow; */
   list-style-type: none;
   width: 200px;
   text-align: left;
@@ -204,34 +229,31 @@ ul.menu {
 }
 .menu-cards,
 .menu-card-items {
-  display: flex;
-  align-items: center;
   gap: 3rem;
 }
 .menu-cards {
   margin-top: 2rem;
 }
-
 .menu-item {
   padding: 5px;
+}
+.menu-item:hover {
+  background-color: #eee;
+  transition: all 300ms ease;
 }
 .menu-item.active {
   color: var(--yellow);
   border-left: 5px solid var(--yellow);
+  background-color: #eee;
 }
 .card-item {
-  background-color: var(--green-light);
   padding: 15px;
-  border-radius: 5px 70px 5px 70px;
   line-height: 2rem;
-  color: #333;
   box-shadow: 0px 0px 2px;
-  transition: all 300ms ease;
 }
 .card-image img {
   width: 200px;
   height: 200px;
-  border-radius: 50%;
 }
 .changed-price {
   text-decoration: line-through;
@@ -245,24 +267,33 @@ ul.menu {
   color: var(--yellow);
 }
 
-/* style footer section*/
+/* style footer section */
 .footer-container {
-  padding: 2rem 6rem 2rem 6rem;
   background-color: var(--green-light);
-  display: flex;
-  justify-content: space-between;
   font-weight: 200;
   color: #444;
 }
 .footer-container div {
   line-height: 2.5rem;
 }
+
 .social-icons i {
   font-size: 1.5rem;
   margin-right: 1rem;
   cursor: pointer;
   color: var(--green-dark);
+  transition: all 300ms ease;
+}
+.social-icons i:hover {
+  font-size: 1.7rem;
 }
 .footer-container ul {
   list-style-type: none;
+}
+.footer-container .links a {
+  color: #444;
+  transition: all 300ms ease;
+}
+.footer-container .links a:hover {
+  border-bottom: 1px solid #444;
 }
