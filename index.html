@@ -28,6 +28,7 @@
           <li><a href="#welcome" class="nav-link">About</a></li>
           <li><a href="#reason" class="nav-link">Reason</a></li>
           <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#explore-recipes" class="nav-link">Search Recipe</a></li>
         </ul>
         <div id="cart">
           <i class="fa-solid fa-cart-shopping"></i>
@@ -183,6 +184,36 @@
     </section>
     <!-- end of menu section -->
 
+    <!-- start of recipe section -->
+    <section id="explore-recipes">
+      <div class="explore-recipes-container">
+        <p class="recipes">Recipes</p>
+        <h2>Search Recipes</h2>
+
+        <!-- recipe form to search recipe -->
+        <form action="#" id="recipe-form">
+          <input type="text" id="recipe-name" placeholder="Search recipe" />
+          <br /><br />
+          <div class="diet-plus-exclude">
+            <select name="diet" id="diet"></select>
+            <input
+              type="text"
+              id="exclude-ingredient"
+              name="exclude-ingredient"
+              placeholder="Ingredient to exclude"
+            />
+          </div>
+          <br />
+
+          <button id="recipe-btn" type="submit">Search</button>
+        </form>
+
+        <!-- where to display recipe search results -->
+        <div class="search-results-container"></div>
+      </div>
+    </section>
+    <!-- end of recipe section -->
+
     <!-- start of footer section-->
     <section id="footer">
       <div class="footer-container">
@@ -195,6 +226,7 @@
             <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-pinterest"></i></a>
           </div>
+          <p>&copy 2023 Figo, Org.</p>
         </div>
         <div class="links">
           <h5>Our Menu</h5>
