@@ -344,8 +344,26 @@ select {
 }
 
 /* styling search result container */
-.search-results-container {
+#search-results-container {
   display: grid;
-  grid-template-columns: repeat(4fr);
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2rem;
+  margin-top: 2rem;
+}
+.search-result {
+  /* padding: 10px; */
+  border-radius: 5px;
+  padding-bottom: 10px;
+  color: var(--grey);
+  font-weight: 200;
+  box-shadow: 0px 0px 3px var(--green);
+  transition: all 100ms ease;
+}
+.search-result:hover {
+  box-shadow: 0px 0px 0px;
+}
+.search-result img {
+  width: 100%;
+  height: 200px;
+  border-radius: 5px;
 }
