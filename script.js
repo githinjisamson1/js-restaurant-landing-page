@@ -52,7 +52,7 @@ function fetchRecipes(searchValue, dietValue, excludeIngredientValue) {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
-      "X-RapidAPI-Key": "0fb4c69135mshbf1098dd3690976p143bdejsn537eda0a56a1",
+      "X-RapidAPI-Key": config.API_KEY,
       "X-RapidAPI-Host": "low-carb-recipes.p.rapidapi.com",
     },
   })

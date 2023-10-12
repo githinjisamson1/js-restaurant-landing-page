@@ -351,7 +351,6 @@ select {
   margin-top: 2rem;
 }
 .search-result {
-  /* padding: 10px; */
   border-radius: 5px;
   padding-bottom: 10px;
   color: var(--grey);
