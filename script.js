@@ -102,6 +102,9 @@ function displayRecipeResults(data) {
     "#search-results-container"
   );
 
+  // empty to give way for subsequent search
+  searchResultsContainer.innerHTML = "";
+
   // iterate fetched data
   data.forEach((result) => {
     // destructuring assignment
