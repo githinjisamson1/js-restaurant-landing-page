@@ -4,7 +4,7 @@ function handleActive(event, items) {
     item.classList.remove("active");
   });
 
-  // now add active class to clicked item
+  // now add active class to clicked-item
   event.target.classList.add("active");
 }
 
