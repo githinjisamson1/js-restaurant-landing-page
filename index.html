@@ -24,14 +24,16 @@
       <header>
         <h1 id="logo">Figo</h1>
         <ul id="navigation-links">
-          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#home" class="nav-link">Home</a></li>
           <li><a href="#welcome" class="nav-link">About</a></li>
           <li><a href="#reason" class="nav-link">Reason</a></li>
           <li><a href="#menu" class="nav-link">Menu</a></li>
           <li><a href="#explore-recipes" class="nav-link">Search Recipe</a></li>
         </ul>
         <div id="cart">
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping"
+            ><span id="cart-badge">3</span></i
+          >
         </div>
       </header>
     </section>
@@ -133,7 +135,7 @@
         <div class="menu-cards">
           <!-- vertical menu -->
           <ul class="menu">
-            <li class="menu-item active">Breakfast</li>
+            <li class="menu-item">Breakfast</li>
             <li class="menu-item">Lunch</li>
             <li class="menu-item">Dinner</li>
             <li class="menu-item">Desert</li>
@@ -255,6 +257,12 @@
       </div>
     </section>
     <!-- end of footer section-->
+
+    <!-- start of procedure modal -->
+    <div id="procedure-modal">
+      <span id="close-modal">&times;</span>
+    </div>
+    <!-- end of procedure modal -->
 
     <!-- link js -->
     <script src="config.js"></script>

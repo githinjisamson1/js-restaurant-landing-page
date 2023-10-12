@@ -1,3 +1,99 @@
+function handleActive(event, items) {
+  // rip off active class from each item
+  items.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  // now add active class to clicked item
+  event.target.classList.add("active");
+}
+
+// !remove redundant code
+// function handleMenuItem(e, menuItems) {
+//   // rip off active class from each menu item
+//   menuItems.forEach((menuItem) => {
+//     menuItem.classList.remove("active");
+//   });
+
+//   // now add active class to clicked menu item
+//   e.target.classList.add("active");
+// }
+
+// function handleNavlink(e, navLinks) {
+//   // rip off active class from each nav link
+//   navLinks.forEach((navLink) => {
+//     navLink.classList.remove("active");
+//   });
+
+//   // now add active class to clicked nav link
+//   e.target.classList.add("active");
+// }
+
+function handleAddToCart(e, cartBadge) {
+  // access current cart value then convert to int
+  let cartCount = parseInt(cartBadge.innerText);
+  cartCount += 1;
+
+  // change displayed cart value
+  cartBadge.innerText = cartCount;
+}
+
+function handleClose(sections, procedureModal) {
+  // grab x
+  const closeModal = document.querySelector("#close-modal");
+
+  // close
+  closeModal.addEventListener("click", (e) => {
+    // hide modal
+    procedureModal.style.display = "none";
+
+    // make all sections clear
+    sections.forEach((section) => {
+      section.style.filter = `blur(0px)`;
+    });
+  });
+}
+
+function handleBlur(sections) {
+  // only modal will be visible clearly
+  sections.forEach((section) => {
+    section.style.filter = `blur(7px)`;
+  });
+}
+
+function displayProcedureAsModal(steps) {
+  // grab elements
+  const sections = document.querySelectorAll("section");
+  const procedureModal = document.querySelector("#procedure-modal");
+
+  // create ol container
+  const olsteps = document.createElement("ol");
+
+  // iterate steps
+  steps.forEach((step) => {
+    // create li for each step
+    const liStep = document.createElement("li");
+
+    // manipulate dom
+    liStep.innerHTML = step;
+
+    // attach to ol
+    olsteps.appendChild(liStep);
+  });
+
+  // attach ol to modal
+  procedureModal.appendChild(olsteps);
+
+  // display modal
+  procedureModal.style.display = "block";
+
+  // make background blurred
+  handleBlur(sections);
+
+  // close modal
+  handleClose(sections, procedureModal);
+}
+
 function displayRecipeResults(data) {
   console.log(data);
 
@@ -9,7 +105,7 @@ function displayRecipeResults(data) {
   // iterate fetched data
   data.forEach((result) => {
     // destructuring assignment
-    const { image, name, cookTime, servings } = result;
+    const { image, name, cookTime, servings, steps } = result;
 
     // create div element for each hit/result
     const searchResult = document.createElement("div");
@@ -22,11 +118,20 @@ function displayRecipeResults(data) {
     <img src="${image}" alt="${name}"/>
     <p>${name}</p>
     <p>Cook Time: ${cookTime}</p>
-    <p>Servings: ${servings}</p>    
+    <p>Servings: ${servings}</p>  
+    <p id="procedure">Procedure</p>  
     `;
 
     // attach to parent container
     searchResultsContainer.appendChild(searchResult);
+
+    // grab procedure
+    const procedure = searchResult.querySelector("p#procedure");
+
+    // clicking procedure
+    procedure.addEventListener("click", (e) => {
+      displayProcedureAsModal(steps);
+    });
   });
 }
 
@@ -125,8 +230,12 @@ function displaySelectDiets() {
 }
 
 function handleDOMContentLoaded(e) {
-  // grab element
+  // grab elements
   const recipeForm = document.querySelector("#recipe-form");
+  const btnsAddToCart = document.querySelectorAll(".card-btn");
+  const cartBadge = document.querySelector("#cart-badge");
+  const navLinks = document.querySelectorAll("#navigation-links .nav-link");
+  const menuItems = document.querySelectorAll(".menu-item");
 
   // invoke to display options in select
   displaySelectDiets();
@@ -134,6 +243,28 @@ function handleDOMContentLoaded(e) {
   // search for recipe
   recipeForm.addEventListener("submit", (e) => {
     recipeFormHandler(e);
+  });
+
+  // add to cart
+  btnsAddToCart.forEach((btnAddToCart) => {
+    // attaching addEventLister to each card-btn
+    btnAddToCart.addEventListener("click", (e) => {
+      handleAddToCart(e, cartBadge);
+    });
+  });
+
+  // clicking a nav link
+  navLinks.forEach((navLink) => {
+    navLink.addEventListener("click", (e) => {
+      handleActive(e, navLinks);
+    });
+  });
+
+  // clicking a menu-item
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", (e) => {
+      handleActive(e, menuItems);
+    });
   });
 }
 
