@@ -206,7 +206,7 @@ function displaySelectDiets() {
     "fish-free",
     "gluten-free",
     "keto",
-    "kid-freely",
+    "kid-friendly",
     "lchf",
     "meal-plan-ok",
     "peanut-free",
