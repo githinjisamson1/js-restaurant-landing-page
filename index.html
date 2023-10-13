@@ -194,7 +194,12 @@
 
         <!-- recipe form to search recipe -->
         <form action="#" id="recipe-form">
-          <input type="text" id="recipe-name" placeholder="Search recipe" />
+          <input
+            type="text"
+            id="recipe-name"
+            placeholder="Search recipe"
+            required
+          />
           <br /><br />
           <div class="diet-plus-exclude">
             <select name="diet" id="diet"></select>
@@ -203,6 +208,7 @@
               id="exclude-ingredient"
               name="exclude-ingredient"
               placeholder="Ingredient to exclude"
+              required
             />
           </div>
           <br />
