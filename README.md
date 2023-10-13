@@ -32,7 +32,7 @@ If you have any feedback, please reach out to me at githinjisamson148@gmail.com
 
 The site is live at:
 
-https://githinjisamson1/phase-1-restaurant-landing-page.github.io
+https://githinjisamson1.github.io/phase-1-project-restaurant-landing-page/
 ## Features
 
 - Live previews
