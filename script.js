@@ -8,27 +8,6 @@ function handleActive(event, items) {
   event.target.classList.add("active");
 }
 
-// !remove redundant code
-// function handleMenuItem(e, menuItems) {
-//   // rip off active class from each menu item
-//   menuItems.forEach((menuItem) => {
-//     menuItem.classList.remove("active");
-//   });
-
-//   // now add active class to clicked menu item
-//   e.target.classList.add("active");
-// }
-
-// function handleNavlink(e, navLinks) {
-//   // rip off active class from each nav link
-//   navLinks.forEach((navLink) => {
-//     navLink.classList.remove("active");
-//   });
-
-//   // now add active class to clicked nav link
-//   e.target.classList.add("active");
-// }
-
 function handleAddToCart(e, cartBadge) {
   // access current cart value then convert to int
   let cartCount = parseInt(cartBadge.innerText);
@@ -36,6 +15,9 @@ function handleAddToCart(e, cartBadge) {
 
   // change displayed cart value
   cartBadge.innerText = cartCount;
+
+  // alert item added to cart
+  alert("Item successfully added to cart!");
 }
 
 function handleClose(sections, procedureModal) {
@@ -120,9 +102,9 @@ function displayRecipeResults(data) {
     searchResult.innerHTML = `
     <img src="${image}" alt="${name}"/>
     <p>${name}</p>
-    <p>Cook Time: ${cookTime}</p>
+    <p>Cook Time: ${cookTime} minutes</p>
     <p>Servings: ${servings}</p>  
-    <p id="procedure">Procedure</p>  
+    <p id="procedure">Click to see procedure</p>  
     `;
 
     // attach to parent container
